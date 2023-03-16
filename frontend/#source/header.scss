@@ -1,0 +1,117 @@
+.header {
+    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='100' fill='%23FFAB08'/%3E%3C/svg%3E%0A");
+    background-position: bottom;
+    background-size: 611px;
+    padding: 24px 0 37px;
+    color: #ffffff;
+    margin-bottom: 30px;
+
+    &__logo {
+        width: 150px;
+        margin: 0 auto 24px
+    }
+
+    &__title-container {
+        padding-bottom: 242px;
+        background: url("/img/header_burger.svg") bottom/227px no-repeat;
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 16px;
+
+        &_red {
+            color: #FF5C00;
+        }
+    }
+}
+
+@media (min-width: 500px) {
+    .header {
+        background-size: 1400px;
+        padding-bottom: 44px;
+
+        &__container {
+            max-width: calc(500px + (var(--padding-container) * 2));
+        }
+
+        &__title-container {
+            padding-bottom: 0;
+            padding-top: 27px;
+            padding-left: 200px;
+            background-position: left;
+            background-size: contain;
+            text-align: left;
+            min-height: 190px;
+        }
+
+        &__title {
+            margin-bottom: 26px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        background-size: 2540px;
+
+
+        &__container {
+            max-width: 562px;
+        }
+
+
+        &__title-container {
+            padding-left: 237px;
+            min-height: 229px;
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .header {
+        background-size: 2880px;
+        padding-bottom: 63px;
+        margin-bottom: 40px;
+
+
+        &__container {
+            max-width: calc(764px + (var(--padding-container) * 2));
+        }
+
+
+        &__title-container {
+            padding-top: 50px;
+            padding-left: 320px;
+            min-height: 326px;
+        }
+
+        &__title {
+            font-size: 50px;
+            margin-bottom: 52px;
+        }
+    }
+}
+
+@media (min-width: 1360px) {
+    .header {
+        padding-bottom: 70px;
+
+
+        &__container {
+            max-width: calc(784px + (var(--padding-container) * 2));
+        }
+
+
+        &__title-container {
+            padding-left: 347px;
+        }
+    }
+}

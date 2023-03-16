@@ -1,0 +1,70 @@
+.navigation {
+  margin-bottom: 30px;
+}
+.navigation__container {
+  padding: 0;
+  min-width: 100vw;
+}
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px;
+  gap: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.navigation__btn {
+  display: inline-block;
+  color: #000;
+  line-height: 16px;
+  border-radius: 50px;
+  padding: 7px 8px 7px 40px;
+  white-space: nowrap;
+  background-repeat: no-repeat;
+  background-position-x: 8px;
+  background-position-y: center;
+  background-size: 24px;
+}
+.navigation__btn_active {
+  background-color: #FFAB08;
+}
+.navigation__btn_burgers {
+  background-image: url("/img/burgers.png");
+}
+.navigation__btn_snacks {
+  background-image: url("/img/snacks.png");
+}
+.navigation__btn_hotdogs {
+  background-image: url("/img/hotdogs.png");
+}
+.navigation__btn_combo {
+  background-image: url("/img/combo.png");
+}
+.navigation__btn_shawarma {
+  background-image: url("/img/shawarma.png");
+}
+.navigation__btn_pizza {
+  background-image: url("/img/pizza.png");
+}
+.navigation__btn_wok {
+  background-image: url("/img/wok.png");
+}
+.navigation__btn_desserts {
+  background-image: url("/img//desserts.png");
+}
+.navigation__btn_sauces {
+  background-image: url("/img//sauces.png");
+}
+
+@media (min-width: 500px) {
+  .navigation__list {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 768px) {
+  .navigation__list {
+    padding: 0 64px;
+    gap: 12px;
+  }
+}
