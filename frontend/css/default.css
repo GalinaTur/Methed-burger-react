@@ -45,7 +45,7 @@ ul, ol, li {
   padding: 0;
 }
 
-h1, h2, h3, h4, figure {
+h1, h2, h3, h4, p, figure {
   margin: 0;
 }
 
@@ -68,12 +68,16 @@ fieldset {
 .container {
   max-width: calc(var(--container) + var(--padding-container) * 2);
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 var(--padding-container);
+}
+
+.currency {
+  font-weight: normal;
 }
 
 @media (min-width: 500px) {
   html {
-    --container: 500px;
+    --container: 480px;
   }
 }
 @media (min-width: 768px) {

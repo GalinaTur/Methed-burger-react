@@ -1,0 +1,108 @@
+.catalog {
+    margin-bottom: 80px;
+
+    &__container {
+        display: grid;
+        gap: 30px;
+    }
+
+    &__title {
+        font-size: 28px;
+        line-height: 1.2;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 145px);
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .catalog__wrapper .product-item {
+        width: 145px;
+        padding: 4px;
+        background: #FFFFFF;
+        border-radius: 12px;
+
+        &__img {
+            width: 137px;
+            height: 120px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        &__price {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.0;
+            margin-bottom: 4px;
+        }
+
+        &__title {
+            margin-bottom: 16px;
+        }
+
+        &__weight {
+            font-weight: 600;
+            color: #B1B1B1;
+            margin-bottom: 7px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .catalog__list {
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .catalog {
+        margin-bottom: 100px;
+
+        &__container {
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+        }
+
+        &__title {
+            font-size: 40px;
+            margin-bottom: 24px;
+        }
+
+        &__list {
+            grid-template-columns: repeat(auto-fill, 300px);
+            gap: 30px;
+        }
+
+        .catalog__wrapper .product-item {
+            width: 300px;
+            padding: 12px;
+            border-radius: 18px;
+
+            &__img {
+                width: 276px;
+                height: 220px;
+                border-radius: 12px;
+                margin-bottom: 16px;
+            }
+
+            &__price {
+                font-weight: 600;
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+
+            &__title {
+                margin-bottom: 29px;
+            }
+
+            &__weight {
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
+

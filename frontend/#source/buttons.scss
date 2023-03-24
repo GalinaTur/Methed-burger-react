@@ -1,0 +1,84 @@
+.count {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 17px;
+    align-items: center;
+    padding: 7px 8px;
+    background: #F2F2F3;
+    border-radius: 8px;
+
+    &__minus,
+    &__plus {
+
+        &:hover,
+        &:focus-visible {}
+    }
+}
+
+.submit {
+    width: 100%;
+    line-height: 1.0;
+    color: #FFFFFF;
+    background: #FF7020;
+    border-radius: 8px;
+    text-align: center;
+    padding: 9px 0;
+
+    &:hover {
+        background: #FFAB08;
+    }
+
+    &:focus-visible {
+        background: #F86310;
+        outline: none;
+    }
+
+    &_unactive {
+        background: #F9F9F9;
+        color: #ACACAC;
+    }
+}
+
+.btn-add {
+    width: 100%;
+    line-height: 1.0;
+    color: #000000;
+    background: #F2F2F3;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px 0;
+
+    &:hover {
+        background-color: #FFAB08;
+        color: #FFFFFF;
+    }
+
+    &:focus-visible {
+        background: #F86310;
+        color: #FFFFFF;
+        outline: none;
+    }
+
+    &_unactive {
+        background: #F9F9F9;
+        color: #ACACAC;
+    }
+}
+
+@media (min-width: 1024px) {
+    .count {
+        padding: 9px 12px;
+        border-radius: 12px;
+        }
+
+    .submit {
+        border-radius: 12px;
+        padding: 12px 0;
+    }
+
+    .btn-add {
+        border-radius: 12px;
+        padding: 12px 0;
+    }
+}
