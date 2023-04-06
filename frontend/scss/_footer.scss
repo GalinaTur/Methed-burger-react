@@ -3,13 +3,18 @@
     background-color: #ffffff;
 
     a {
-        color: #FF7020;
+        color: $primary-btn-color;
         cursor: pointer;
+        @include transition-ease;
 
         &:hover,
         &:focus-visible {
             outline: none;
-            color: #FFAB08;
+            color: $color-hover;
+        }
+
+        &:active {
+            transform: translate(-1px, 1px);
         }
     }
 
@@ -51,10 +56,9 @@
     line-height: 16px;
 }
 
-@media (min-width: 500px) {
+@include media-sm {
     .footer {
         padding-top: 40px;
-
 
         &__logo svg {
             margin-bottom: 36px;
@@ -68,7 +72,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@include media-md {
     .footer {
         .contacts {
             gap: 177px;
@@ -76,7 +80,7 @@
     }
 }
 
-@media (min-width: 1024px) {
+@include media-lg {
     .footer {
         padding: 52px 0 39px;
 
@@ -109,7 +113,7 @@
     }
 }
 
-@media (min-width: 1360px) {
+@include media-xl {
     .footer {
 
         &__container {

@@ -1,0 +1,40 @@
+$container-width: 300px;
+$container-padding: 10px;
+$color-hover:#FFAB08;
+$primary-btn-color:#FF7020;
+
+@mixin transition-ease {
+    transition: all 0.1s ease-in-out;
+}
+
+@mixin calc-container-width($container-width, $container-padding) {
+    .container {
+        max-width: $container-width + ($container-padding * 2);
+        margin: 0 auto;
+        padding: 0 $container-padding;
+    }
+}
+
+@mixin media-sm {
+    @media (min-width: 500px) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media (min-width: 1360px) {
+        @content;
+    }
+}

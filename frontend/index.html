@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="./site.webmanifest">
     <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -22,10 +22,11 @@
 </head>
 
 <body>
+    <!--  class="body-no-scroll" -->
     <header class="header">
         <div class="container header__container">
             <svg class="header__logo" viewbox="0 0 199 44" role="img" aria-roledescription="Логотип YourMeal">
-                <use href="/img/sprite.svg#logo" />
+                <use href="./img/sprite.svg#logo" />
             </svg>
 
             <div class="header__title-container">
@@ -74,8 +75,9 @@
         <section class="catalog">
             <div class="container catalog__container">
                 <div class="catalog__order order">
+                    <!--  order_collapsed -->
                     <div class="order__wrapper">
-                        <div class="order__wrap-tittle">
+                        <div class="order__wrap-tittle" role="button">
                             <h3 class="order__title">Корзина</h3>
                             <span class="order__count">4</span>
                         </div>
@@ -86,12 +88,10 @@
                                     <div class="product-item__description">
                                         <h4 class="product-item__title">Супер сырный</h4>
                                         <p class="product-item__weight">
-                                            <span>512</span>
-                                            <span>г</span>
+                                            512г
                                         </p>
                                         <p class="product-item__price">
-                                            <span>550</span>
-                                            <span class="currency">₴</span>
+                                            550<span class="currency">₴</span>
                                         </p>
                                     </div>
                                     <div class="product-item__count count">
@@ -105,12 +105,10 @@
                                     <div class="product-item__description">
                                         <h4 class="product-item__title">Картошка фри</h4>
                                         <p class="product-item__weight">
-                                            <span>180</span>
-                                            <span>г</span>
+                                            180г
                                         </p>
                                         <p class="product-item__price">
-                                            <span>245</span>
-                                            <span class="currency">₴</span>
+                                            245<span class="currency">₴</span>
                                         </p>
                                     </div>
                                     <div class="product-item__count count">
@@ -124,12 +122,10 @@
                                     <div class="product-item__description">
                                         <h4 class="product-item__title">Жгучий хот-дог</h4>
                                         <p class="product-item__weight">
-                                            <span>245</span>
-                                            <span>г</span>
+                                            245г
                                         </p>
                                         <p class="product-item__price">
-                                            <span>239</span>
-                                            <span class="currency">₴</span>
+                                            239<span class="currency">₴</span>
                                         </p>
                                     </div>
                                     <div class="product-item__count count">
@@ -142,8 +138,7 @@
                             <div class="order__total">
                                 <p>Итого</p>
                                 <p>
-                                    <span>1279</span>
-                                    <span class="currency">₴</span>
+                                    1279<span class="currency">₴</span>
                                 </p>
                             </div>
 
@@ -160,95 +155,108 @@
                     <h2 class="catalog__title">Бургеры</h2>
                     <div class="catalog__wrap-list">
                         <ul class="catalog__list">
-                            <li class="catalog__product-item product-item">
-                                <img src="./img/meatBomb.jpg" alt="Мясная бомба" class="product-item__img">
-                                <p class="product-item__price">
-                                    <span>689</span>
-                                    <span class="currency">₴</span>
-                                </p>
-                                <p class="product-item__title">
-                                    Мясная бомба
-                                </p>
-                                <p class="product-item__weight">
-                                    <span>520</span>
-                                    <span>г</span>
-                                </p>
-                                <button class="product-item__btn-add btn-add">Добавить</button>
+                            <li class="catalog__product-items">
+                                <article class="product-item">
+                                    <a href="" class="product-item__link">
+                                        <img src="./img/meatBomb.jpg" alt="Мясная бомба" class="product-item__img">
+                                        <p class="product-item__price">
+                                            689<span class="currency">₴</span>
+                                        </p>
+                                        <p class="product-item__title">
+                                            Мясная бомба
+                                        </p>
+                                        <p class="product-item__weight">
+                                            520г
+                                        </p>
+                                    </a>
+                                    <button class="product-item__btn-add btn-add">Добавить</button>
+                                </article>
                             </li>
-                            <li class="catalog__product-item product-item">
-                                <img src="./img/burgerCheese1.jpg" alt="Супер сырный" class="product-item__img">
-                                <p class="product-item__price">
-                                    <span>550</span>
-                                    <span class="currency">₴</span>
-                                </p>
-                                <p class="product-item__title">
-                                    Супер сырный
-                                </p>
-                                <p class="product-item__weight">
-                                    <span>512</span>
-                                    <span>г</span>
-                                </p>
-                                <button class="product-item__btn-add btn-add">Добавить</button>
+                            <li class="catalog__product-items">
+                                <article class="product-item">
+                                    <a href="" class="product-item__link">
+                                        <img src="./img/burgerCheese1.jpg" alt="Супер сырный" class="product-item__img">
+                                        <p class="product-item__price">
+                                            550<span class="currency">₴</span>
+                                        </p>
+                                        <p class="product-item__title">
+                                            Супер сырный
+                                        </p>
+                                        <p class="product-item__weight">
+                                            512г
+                                        </p>
+                                    </a>
+                                    <button class="product-item__btn-add btn-add">Добавить</button>
+                                </article>
                             </li>
-                            <li class="catalog__product-item product-item">
-                                <img src="./img/nourishing.jpg" alt="Сытный" class="product-item__img">
-                                <p class="product-item__price">
-                                    <span>639</span>
-                                    <span class="currency">₴</span>
-                                </p>
-                                <p class="product-item__title">
-                                    Сытный
-                                </p>
-                                <p class="product-item__weight">
-                                    <span>580</span>
-                                    <span>г</span>
-                                </p>
-                                <button class="product-item__btn-add btn-add">Добавить</button>
+                            <li class="catalog__product-items">
+                                <article class="product-item">
+                                    <a href="" class="product-item__link">
+                                        <img src="./img/nourishing.jpg" alt="Сытный" class="product-item__img">
+                                        <p class="product-item__price">
+                                            639<span class="currency">₴</span>
+                                        </p>
+                                        <p class="product-item__title">
+                                            Сытный
+                                        </p>
+                                        <p class="product-item__weight">
+                                            580г
+                                        </p>
+                                    </a>
+                                    <button class="product-item__btn-add btn-add">Добавить</button>
+                                </article>
                             </li>
-                            <li class="catalog__product-item product-item">
-                                <img src="./img/hammerBlow.jpg" alt="Тяжелый удар" class="product-item__img">
-                                <p class="product-item__price">
-                                    <span>480</span>
-                                    <span class="currency">₴</span>
-                                </p>
-                                <p class="product-item__title">
-                                    Тяжелый удар
-                                </p>
-                                <p class="product-item__weight">
-                                    <span>470</span>
-                                    <span>г</span>
-                                </p>
-                                <button class="product-item__btn-add btn-add">Добавить</button>
+                            <li class="catalog__product-items">
+                                <article class="product-item">
+                                    <a href="" class="product-item__link">
+                                        <img src="./img/hammerBlow.jpg" alt="Тяжелый удар" class="product-item__img">
+                                        <p class="product-item__price">
+                                            480<span class="currency">₴</span>
+                                        </p>
+                                        <p class="product-item__title">
+                                            Тяжелый удар
+                                        </p>
+                                        <p class="product-item__weight">
+                                            470г
+                                        </p>
+                                    </a>
+                                    <button class="product-item__btn-add btn-add">Добавить</button>
+                                </article>
                             </li>
-                            <li class="catalog__product-item product-item">
-                                <img src="./img/timelessClassic.jpg" alt="Вечная классика" class="product-item__img">
-                                <p class="product-item__price">
-                                    <span>450</span>
-                                    <span class="currency">₴</span>
-                                </p>
-                                <p class="product-item__title">
-                                    Вечная классика
-                                </p>
-                                <p class="product-item__weight">
-                                    <span>450</span>
-                                    <span>г</span>
-                                </p>
-                                <button class="product-item__btn-add btn-add">Добавить</button>
+                            <li class="catalog__product-items">
+                                <article class="product-item">
+                                    <a href="" class="product-item__link">
+                                        <img src="./img/timelessClassic.jpg" alt="Вечная классика"
+                                            class="product-item__img">
+                                        <p class="product-item__price">
+                                            450<span class="currency">₴</span>
+                                        </p>
+                                        <p class="product-item__title">
+                                            Вечная классика
+                                        </p>
+                                        <p class="product-item__weight">
+                                            450г
+                                        </p>
+                                    </a>
+                                    <button class="product-item__btn-add btn-add">Добавить</button>
+                                </article>
                             </li>
-                            <li class="catalog__product-item product-item">
-                                <img src="./img/italian.jpg" alt="Итальянская" class="product-item__img">
-                                <p class="product-item__price">
-                                    <span>560</span>
-                                    <span class="currency">₴</span>
-                                </p>
-                                <p class="product-item__title">
-                                    Итальянская
-                                </p>
-                                <p class="product-item__weight">
-                                    <span>510</span>
-                                    <span>г</span>
-                                </p>
-                                <button class="product-item__btn-add btn-add">Добавить</button>
+                            <li class="catalog__product-items">
+                                <article class="product-item">
+                                    <a href="" class="product-item__link">
+                                        <img src="./img/italian.jpg" alt="Итальянская" class="product-item__img">
+                                        <p class="product-item__price">
+                                            560<span class="currency">₴</span>
+                                        </p>
+                                        <p class="product-item__title">
+                                            Итальянская
+                                        </p>
+                                        <p class="product-item__weight">
+                                            510г
+                                        </p>
+                                    </a>
+                                    <button class="product-item__btn-add btn-add">Добавить</button>
+                                </article>
                             </li>
                         </ul>
                     </div>
@@ -263,12 +271,12 @@
                     <use href="./img/sprite.svg#logo" />
                 </svg>
             </a>
-            <div class="contacts">
+            <adress class="contacts">
                 <div class="contacts__phone">
                     <p class="contacts__description">
                         Номер для заказа
                     </p>
-                    <a href="tel: +380737373737" class="contacts__phone-number">
+                    <a href="tel:+380737373737" class="contacts__phone-number">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z"
@@ -282,7 +290,7 @@
                         Мы в соцсетях
                     </p>
                     <div class="contacts__wrapper-links">
-                        <a href="vk.com" class="contacts__link">
+                        <a href="vk.com" rel="nofollow" class="contacts__link" aria-label="наша группа в вк">
                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -290,7 +298,8 @@
                                     fill="currentColor" />
                             </svg>
                         </a>
-                        <a href="https://telegram.org/" class="contacts__link">
+                        <a href="https://telegram.org/" rel="nofollow" class="contacts__link"
+                            aria-label="наш телеграм-канал">
                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -300,13 +309,93 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </adress>
         </div>
         <div class="copyright container">
-            <span>© YourMeal, 2022</span>
+            <span>© YourMeal, 2023</span>
             <span>Design: Anastasia Ilina</span>
         </div>
     </footer>
+
+    <div class="modal modal_product">
+        <div class="modal__main modal-product">
+            <button class="btn__close-modal"> <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5.07422" y="5.28247" width="1" height="20" transform="rotate(-45 5.07422 5.28247)" />
+                    <rect x="5.78125" y="19.4246" width="1" height="20" transform="rotate(-135 5.78125 19.4246)" />
+                </svg>
+            </button>
+            <div class="modal-product__container">
+                <h2 class="modal-product__title">Мясная бомба</h2>
+                <img src="./img/meatBomb.jpg" alt="Мясная бомба" class="modal-product__img">
+                <div class="modal-product__description">Супер мясное наслаждение! Большая рубленая котлета из свежего
+                    говяжего мяса покорит вас своей сочностью, а хрустящие листья салата добавят свежести.</div>
+                <div class="modal-product__ingredients ingredients">
+                    <h2 class="ingredients__title">Состав:</h2>
+                    <ul class="ingredients__list">
+                        <li class="ingredients__item">Пшеничная булочка</li>
+                        <li class="ingredients__item">Котлета из говядины</li>
+                        <li class="ingredients__item">Красный лук</li>
+                        <li class="ingredients__item">Листья салата</li>
+                        <li class="ingredients__item">Соус горчичный</li>
+                    </ul>
+                    <p class="ingredients__calories">520г, ккал 430</p>
+                </div>
+
+                <div class="modal-product__footer">
+                    <div class="modal-product__btns">
+                        <button class="modal-product__submit submit">Добавить</button>
+                        <div class="modal-product__count count">
+                            <button class="count__minus">-</button>
+                            <span class="count__amount">1</span>
+                            <button class="count__plus">+</button>
+                        </div>
+                    </div>
+                    <p class="modal-product__price">689<span class="currency">₴</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal_order modal_open">
+        <!-- modal_open -->
+        <div class="modal__main modal-order-form">
+            <button class="btn__close-modal"> <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5.07422" y="5.28247" width="1" height="20" transform="rotate(-45 5.07422 5.28247)" />
+                    <rect x="5.78125" y="19.4246" width="1" height="20" transform="rotate(-135 5.78125 19.4246)" />
+                </svg>
+            </button>
+            <div class="modal-order-form__decor"></div>
+            <form action="" class="modal-order-form__form order-form">
+                <h2 class="order-form__title">Доставка</h2>
+                <div class="order-form__inputs">
+                    <fieldset class="order-form__fieldset">
+                        <input type="text" class="order-form__input" name="name" placeholder="Ваше имя">
+                        <input type="tel" class="order-form__input" name="phone" placeholder="Телефон">
+                    </fieldset>
+                    <fieldset class="order-form__fieldset order-form__fieldset_radio">
+                        <label class="order-form__order-type">
+                            <input class="order-form__radio" type="radio" name="order-type" value="pickup" checked>
+                            <span>Самовывоз</span>
+                        </label>
+
+                        <label class="order-form__order-type">
+                            <input class="order-form__radio" type="radio" name="order-type" value="delivery" checked>
+                            <span>Доставка</span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="order-form__fieldset-additional order-form__fieldset-additional_opened">
+                        <input type="text" class="order-form__input" placeholder="Улица, дом, квартира">
+                        <input type="number" class="order-form__input" placeholder="Этаж">
+                        <input type="text" class="order-form__input" placeholder="Домофон">
+                    </fieldset>
+                </div>
+                <button type="submit" class="order-form__submit submit">Оформить</button>
+            </form>
+        </div>
+    </div>
 </body>
+
 
 </html>

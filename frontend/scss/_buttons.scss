@@ -1,0 +1,114 @@
+.count {
+    width: 74px;
+    height: 30px;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 8px;
+    background-color: #F2F2F3;
+    border-radius: 8px;
+    @include transition-ease;
+
+    &__minus,
+    &__plus {
+        width: 8px;
+        border-radius: 8px;
+
+        &:hover,
+        &:focus-visible {
+            transform: scale(1.5);
+        }
+
+        &:focus-visible {
+            outline: 1px solid $color-hover;
+            outline-offset: 3px;
+        }
+
+        &:active {
+            transform: translate(-1px, 1px);
+        }
+    }
+}
+
+.submit {
+    width: 100%;
+    line-height: 1.0;
+    color: #FFFFFF;
+    background-color: $primary-btn-color;
+    border-radius: 8px;
+    text-align: center;
+    padding: 9px 0;
+    @include transition-ease;
+
+    &:hover,
+    &:focus-visible {
+        background-color: $color-hover;
+        outline: none;
+    }
+
+    &:active {
+        transform: translate(-1px, 1px);
+    }
+
+    &:disabled {
+        background-color: #F9F9F9;
+        color: #ACACAC;
+    }
+}
+
+.btn-add {
+    @extend .submit;
+    color: #000000;
+    background-color: #F2F2F3;
+    @include transition-ease;
+
+    &:hover,
+    &:focus-visible {
+        color: #FFFFFF;
+    }
+}
+
+.btn__close-modal {
+    color: #B1B1B1;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    @include transition-ease;
+
+    &:hover {
+        color: $color-hover;
+    }
+
+    &:focus-visible {
+        color: $color-hover;
+        outline: 1px solid $color-hover;
+        outline-offset: 3px;
+    }
+
+    &:active {
+        transform: translate(-1px, 1px);
+    }
+}
+
+@include media-md {
+    .btn__close-modal {
+        right: 16px;
+        top: 16px;
+    }
+}
+
+@include media-lg {
+    .count {
+        width: 84px;
+        height: 40px;
+        padding: 9px 12px;
+        border-radius: 12px;
+    }
+
+    .submit {
+        border-radius: 12px;
+        padding: 12px 0;
+    }
+}

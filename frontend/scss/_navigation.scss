@@ -7,12 +7,11 @@
     }
 
     &__list {
+        padding: 0 $container-padding;
         display: flex;
-        padding: 0 calc((100vw/2 - var(--container)/2));
         justify-content: space-between;
         gap: 8px;
         overflow-x: auto;
-        overflow-y: hidden;
 
         &::-webkit-scrollbar {
             display: none;
@@ -21,9 +20,7 @@
 
     &__btn {
         display: inline-block;
-        color: #000;
-        line-height: 16px;
-        border: 1px solid transparent;
+        outline: 1px solid transparent;
         border-radius: 50px;
         padding: 7px 8px 7px 40px;
         white-space: nowrap;
@@ -32,17 +29,22 @@
         background-position-x: 8px;
         background-position-y: center;
         background-size: 24px;
+        @include transition-ease;
 
         &:hover,
         &:focus-visible {
             outline: 1px solid #F86310;
-            outline-offset: -1px;
+            outline-offset: -2px;
+        }
+
+        &:active {
+            transform: translate(-1px, 1px);
         }
     }
 
     &__btn_active {
         pointer-events: none;
-        background-color: #FFAB08;
+        background-color: $color-hover;
 
         &:focus {
             outline: none;
@@ -50,50 +52,50 @@
     }
 
     &__btn_burgers {
-        background-image: url("/img/burgers.png");
+        background-image: url("../img/burgers.png");
     }
 
     &__btn_snacks {
-        background-image: url("/img/snacks.png");
+        background-image: url("../img/snacks.png");
     }
 
     &__btn_hotdogs {
-        background-image: url("/img/hotdogs.png");
+        background-image: url("../img/hotdogs.png");
     }
 
     &__btn_combo {
-        background-image: url("/img/combo.png");
+        background-image: url("../img/combo.png");
     }
 
     &__btn_shawarma {
-        background-image: url("/img/shawarma.png");
+        background-image: url("../img/shawarma.png");
     }
 
     &__btn_pizza {
-        background-image: url("/img/pizza.png");
+        background-image: url("../img/pizza.png");
     }
 
     &__btn_wok {
-        background-image: url("/img/wok.png");
+        background-image: url("../img/wok.png");
     }
 
 
     &__btn_desserts {
-        background-image: url("/img//desserts.png");
+        background-image: url("../img/desserts.png");
     }
 
     &__btn_sauces {
-        background-image: url("/img//sauces.png");
+        background-image: url("../img/sauces.png");
     }
 }
 
-@media (min-width: 768px) {
+@include media-md {
     .navigation__list {
         gap: 12px;
     }
 }
 
-@media (min-width: 1024px) {
+@include media-lg {
     .navigation {
         margin-bottom: 50px;
 

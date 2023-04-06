@@ -1,0 +1,29 @@
+.modal-order-form {
+    display: flex;
+    justify-content: stretch;
+}
+
+@include media-sm {
+    .modal-order-form {
+        background-color: #F9F9F9;
+        min-height: 341px;
+        padding: 20px 16px 29px;
+    }
+}
+
+@include media-lg {
+    .modal-order-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        min-height: 432px;
+
+        &__decor {
+            border-radius: 24px 0 0 24px;
+            background-color: $color-hover;
+            background-image: url("../img/modal_donut.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

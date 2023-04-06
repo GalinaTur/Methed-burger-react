@@ -13,7 +13,7 @@
 
     &__title-container {
         padding-bottom: 242px;
-        background: url("/img/header_burger.svg") bottom/227px no-repeat;
+        background: url("../img/header_burger.svg") bottom/227px no-repeat;
         text-align: center;
     }
 
@@ -29,13 +29,13 @@
     }
 }
 
-@media (min-width: 500px) {
+@include media-sm {
     .header {
         background-size: 1400px;
         padding-bottom: 44px;
 
         &__container {
-            max-width: calc(500px + (var(--padding-container) * 2));
+            max-width: calc(500px + ($container-padding * 2));
         }
 
         &__title-container {
@@ -54,15 +54,13 @@
     }
 }
 
-@media (min-width: 768px) {
+@include media-md {
     .header {
         background-size: 2540px;
-
 
         &__container {
             max-width: 562px;
         }
-
 
         &__title-container {
             padding-left: 237px;
@@ -75,17 +73,15 @@
     }
 }
 
-@media (min-width: 1024px) {
+@include media-lg {
     .header {
         background-size: 2880px;
         padding-bottom: 63px;
         margin-bottom: 40px;
 
-
         &__container {
-            max-width: calc(764px + (var(--padding-container) * 2));
+            max-width: calc(764px + ($container-padding * 2));
         }
-
 
         &__title-container {
             padding-top: 50px;
@@ -100,15 +96,13 @@
     }
 }
 
-@media (min-width: 1360px) {
+@include media-xl {
     .header {
         padding-bottom: 70px;
 
-
         &__container {
-            max-width: calc(784px + (var(--padding-container) * 2));
+            max-width: calc(784px + ($container-padding * 2));
         }
-
 
         &__title-container {
             padding-left: 347px;

@@ -1,0 +1,127 @@
+.modal-product {
+    display: flex;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    &__img {
+        border-radius: 16px;
+        margin-bottom: 16px;
+    }
+
+    &__description {
+        margin-bottom: 10px;
+    }
+
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__btns {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__price {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.3;
+        text-align: right;
+    }
+}
+
+@include media-sm {
+    .modal-product {
+        &__container {
+            display: grid;
+            grid-template-areas: "title title"
+                "img description"
+                "img ingredients"
+                "footer footer";
+            grid-template-columns: 226px 1fr;
+            grid-template-rows: min-content min-content;
+            column-gap: 8px;
+            max-width: 480px;
+        }
+
+        &__title {
+            grid-area: title;
+            margin-bottom: 16px;
+        }
+
+        &__img {
+            grid-area: img;
+            margin-bottom: 24px;
+        }
+
+        &__description {
+            grid-area: description;
+            margin-bottom: 3px;
+        }
+
+        &_ingredients {
+            grid-area: ingredients;
+        }
+
+        &__footer {
+            grid-area: footer;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__btns {
+            width: 300px;
+        }
+    }
+}
+
+@include media-md {
+    .modal-product {
+        &__container {
+            max-width: 492px;
+        }
+    }
+}
+
+@include media-lg {
+    .modal-product {
+        &__container {
+            grid-template-columns: 276px 1fr;
+            column-gap: 16px;
+            max-width: 640px;
+        }
+
+        &__title {
+            font-size: 40px;
+            margin-bottom: 24px;
+        }
+
+        &__img {
+            margin-bottom: 40px;
+        }
+
+        &__btns {
+            width: 376px;
+            gap: 16px;
+        }
+
+        &__price {
+            font-size: 24px;
+        }
+    }
+}

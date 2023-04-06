@@ -1,7 +1,7 @@
 html {
-    --container: 300px;
-    --padding-container: 10px;
     box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
 }
 
 *, *::before, *:after {
@@ -16,6 +16,13 @@ body {
     min-width: 320px;
     background-color: #F9F9F9;
     color: #000000;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.body-no-scroll {
+    position: fixed;
+    overflow: hidden;
 }
 
 img, svg {
@@ -62,44 +69,44 @@ fieldset {
     transform: scale(0);
 }
 
-.container {
-    max-width: calc(var(--container) + var(--padding-container)*2);
-    margin: 0 auto;
-    padding: 0 var(--padding-container);
-}
-
 .currency {
     font-weight: normal;
 }
 
-@media (min-width:500px) {
-    html {
-        --container: 480px;
-    }
+@include calc-container-width($container-width, $container-padding);
+
+@include media-sm {
+    $container-width: 480px;
+    $container-padding: 10px;
+
+    @include calc-container-width($container-width, $container-padding);
 }
 
-@media (min-width:768px) {
-    html {
-        --container: 640px;
-        --padding-container: 64px;
-    }
+@include media-md {
+        $container-width: 640px;
+        $container-padding: 64px;
+
+        @include calc-container-width($container-width, $container-padding);
 }
 
-@media (min-width:1024px) {
-    html {
-        --container: 960px;
-        --padding-container: 32px;
-    }
+@include media-lg {
+    $container-width: 960px;
+    $container-padding: 32px;
 
     body {
-        font-family: Nunito, sans-serif;
         font-size: 16px;
     }
+
+    @include calc-container-width($container-width, $container-padding);
 }
 
-@media (min-width:1360px) {
-    html {
-        --container: 1290px;
-        --padding-container: 35px;
+@include media-xl {
+    $container-width: 1290px;
+    $container-padding: 35px;
+
+    body {
+        font-size: 16px;
     }
+
+    @include calc-container-width($container-width, $container-padding);
 }

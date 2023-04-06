@@ -1,6 +1,7 @@
 .order {
     position: relative;
-    line-height: 16px;
+    line-height: 16px; 
+    min-height: 48px;
 
     &__wrapper {
         position: absolute;
@@ -18,6 +19,12 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 8px;
+        border-radius: 8px;
+
+    &:focus-visible {
+        outline-offset: 15px;
+        outline: 1px solid $color-hover;
+    }
     }
 
     &__title {
@@ -35,7 +42,6 @@
     }
 
     &_collapsed &__wrapper {
-        position: static;
         box-shadow: none;
     }
 
@@ -45,6 +51,12 @@
 
     &_collapsed &__wrap-tittle {
         margin-bottom: 0px;
+
+        &:focus-visible {
+            outline: 1px solid #F86310;
+            outline-offset: 8px;
+            border-radius: 3px;
+        }
     }
 
     &__wrap-product-item {
@@ -101,7 +113,7 @@
 
         .order__apeal {
             padding-left: 32px;
-            background-image: url(/img/delivery.png);
+            background-image: url("../img/delivery.png");
             background-size: 24px;
             background-position: left;
             background-repeat: no-repeat;
@@ -119,19 +131,18 @@
     }
 }
 
-@media(min-width: 500px) {
+@include media-sm {
     .order_collapsed .order__wrapper {
         width: 145px;
     }
 }
 
-@media (min-width: 1024px) {
+@include media-lg {
     .order {
         margin-top: 84px;
-        position: static;
 
         &__wrapper {
-            position: static;
+            position: initial;
             box-shadow: none;
             border-radius: 18px;
             padding: 24px 16px;
