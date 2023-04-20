@@ -1,0 +1,32 @@
+@import "../../common-styles/mixins";
+@import "../../common-styles/variables";
+
+@include calc-container-width($container-width, $container-padding);
+
+@include media-sm {
+    $container-width: 480px;
+    $container-padding: 10px;
+
+    @include calc-container-width($container-width, $container-padding);
+}
+
+@include media-md {
+    $container-width: 640px;
+    $container-padding: 64px;
+
+    @include calc-container-width($container-width, $container-padding);
+}
+
+@include media-lg {
+    $container-width: 960px;
+    $container-padding: 32px;
+
+    @include calc-container-width($container-width, $container-padding);
+}
+
+@include media-xl {
+    $container-width: 1290px;
+    $container-padding: 35px;
+
+    @include calc-container-width($container-width, $container-padding);
+}
