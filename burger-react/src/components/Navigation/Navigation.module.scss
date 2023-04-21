@@ -1,0 +1,115 @@
+@import "../../common-styles/mixins";
+@import "../../common-styles/variables";
+
+.navigation {
+    margin-bottom: 30px;
+
+    .container {
+        padding: 0;
+        min-width: 100vw;
+    }
+
+    .list {
+        padding: 0 $container-padding;
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .btn {
+        display: inline-block;
+        outline: 1px solid transparent;
+        border-radius: 50px;
+        padding: 7px 8px 7px 40px;
+        white-space: nowrap;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position-x: 8px;
+        background-position-y: center;
+        background-size: 24px;
+        @include transition-ease;
+
+        &:hover,
+        &:focus-visible {
+            outline: 1px solid #F86310;
+            outline-offset: -2px;
+        }
+
+        &:active {
+            transform: translate(-1px, 1px);
+        }
+    }
+
+    .btn_active {
+        pointer-events: none;
+        background-color: $color-hover;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .btn_burgers {
+        background-image: url("../../assets/img/burgers.png");
+    }
+
+    .btn_snacks {
+        background-image: url("../../assets/img/snacks.png");
+    }
+
+    .btn_hotdogs {
+        background-image: url("../../assets/img/hotdogs.png");
+    }
+
+    .btn_combo {
+        background-image: url("../../assets/img/combo.png");
+    }
+
+    .btn_shawarma {
+        background-image: url("../../assets/img/shawarma.png");
+    }
+
+    .btn_pizza {
+        background-image: url("../../assets/img/pizza.png");
+    }
+
+    .btn_wok {
+        background-image: url("../../assets/img/wok.png");
+    }
+
+
+    .btn_desserts {
+        background-image: url("../../assets/img/desserts.png");
+    }
+
+    .btn_sauces {
+        background-image: url("../../assets/img/sauces.png");
+    }
+}
+
+@include media-md {
+    .navigation__list {
+        gap: 12px;
+    }
+}
+
+@include media-lg {
+    .navigation {
+        margin-bottom: 50px;
+
+        .list {
+            gap: 24px;
+        }
+
+        .btn {
+            line-height: 22px;
+            padding: 9px 14px 9px 46px;
+            background-position-x: 14px;
+        }
+    }
+}

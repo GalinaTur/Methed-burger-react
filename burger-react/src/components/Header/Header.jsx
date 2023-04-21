@@ -5,7 +5,7 @@ import logoSvg from "../../assets/img/sprite.svg"
 
 export const Header = () => (
   <header className={styles.header}>
-    <Container className={styles.header__container}>
+    <Container className={styles.container}>
     <svg className={styles.logo} viewBox="0 0 199 44" role="img" aria-roledescription="Логотип YourMeal">
                 <use href={`${logoSvg}#logo`}/>
             </svg>

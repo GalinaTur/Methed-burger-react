@@ -37,7 +37,7 @@
         background-size: 1400px;
         padding-bottom: 44px;
 
-        &__container {
+        .container {
             max-width: calc(500px + ($container-padding * 2));
         }
 
@@ -61,7 +61,7 @@
     .header {
         background-size: 2540px;
 
-        &__container {
+        .container {
             max-width: 562px;
         }
 
@@ -82,7 +82,7 @@
         padding-bottom: 63px;
         margin-bottom: 40px;
 
-        &__container {
+        .container {
             max-width: calc(764px + ($container-padding * 2));
         }
 
@@ -103,7 +103,7 @@
     .header {
         padding-bottom: 70px;
 
-        &__container {
+        .container {
             max-width: calc(784px + ($container-padding * 2));
         }
 

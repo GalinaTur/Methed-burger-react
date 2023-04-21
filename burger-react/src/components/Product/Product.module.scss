@@ -1,0 +1,152 @@
+@import "../../common-styles/mixins";
+
+.productItem_order {
+    position: relative;
+    
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .link {
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 8px;
+            outline: 1px solid transparent;
+        }
+
+        &:focus-visible {
+            outline: none;
+
+            &:after {
+                outline-color: $color-hover;
+            }
+        }
+    }
+
+    .img {
+        width: 64px;
+        height: 52px;
+        border-radius: 8px;
+    }
+
+    .description {
+        flex-grow: 1;
+        white-space: nowrap;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .title {
+            font-weight: normal;
+        }
+
+        .weight {
+            color: #B1B1B1;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+    @include media-lg {
+
+        .productItem_order {
+            .description {
+                font-size: 12px;
+            }
+        }
+
+    }
+
+    .productItem_catalog {
+        position: relative;
+        width: 145px;
+        padding: 4px;
+        background: #FFFFFF;
+        border-radius: 12px;
+        cursor: pointer;
+
+        .link {
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                border-radius: 8px;
+                outline: 1px solid transparent;
+            }
+
+            &:focus-visible {
+                outline: none;
+
+                &:after {
+                    outline-color: $color-hover;
+                }
+            }
+        }
+
+        .img {
+            width: 100%;
+            height: 120px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+
+        .price {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.0;
+            margin-bottom: 4px;
+        }
+
+        .title {
+            margin-bottom: 16px;
+        }
+
+        .weight {
+            font-weight: 600;
+            color: #B1B1B1;
+            margin-bottom: 7px;
+        }
+    }
+
+    @include media-lg {
+        .productItem_catalog {
+            width: 300px;
+            padding: 12px;
+            border-radius: 18px;
+
+            .link {
+                &:focus-visible {
+                    outline-offset: 15px;
+                    border-radius: 8px;
+                }
+            }
+
+            .img {
+                height: 220px;
+                border-radius: 12px;
+                margin-bottom: 16px;
+            }
+
+            .price {
+                font-weight: 600;
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+
+            .title {
+                margin-bottom: 29px;
+            }
+
+            .weight {
+                margin-bottom: 8px;
+            }
+        }
+    }
